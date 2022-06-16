@@ -8,17 +8,25 @@ import ShoppingCartItem from './components/ShoppingCartItem'
 
 import './App.css';
 
-function App() {
+class App extends React.Component() {
+  ListCart = [
+    {products: '',
+
+  }
+]
+  render() {
+
   return (
     <div>
-      <Depositions />
-      <Filters />
+      {/* <Depositions /> */}
+      {/* <Filters /> */}
       <Products />
       <ProductsCard />
-      <ShoppingCart />
-      <ShoppingCartItem />
+      {/* <ShoppingCart /> */}
+      {/* <ShoppingCartItem /> */}
     </div>
   );
+  }
 }
 
 export default App;
