@@ -43,16 +43,16 @@ export default class Filters extends Component {
        <TextoFiltro> Busque Nossas Categorias de Subprodutos</TextoFiltro>
        <Filtro>
         <label for="ValorMínimo">Valor Mínimo:</label>
-        <input OnChange={this.OnChangeValorInputContadorMin} 
+        <input OnChange={this.OnChangeValorInputContadorMin + 1} 
         type="Number" 
         // value={this.state.ValorInputContadorMin}
         id="ValorMínimo"
         placeholder='Valor Mínimo' />
 
         <label for="ValorMáximo">Valor Máximo:</label>
-        <input OnChange={this.OnChangeValorInputContadorMax} 
+        <input OnChange={this.OnChangeValorInputContadorMax + 1} 
         type="Number" 
-        value={this.state.ValorInputContadorMax}
+        // value={this.state.ValorInputContadorMax}
         id="ValorMáximo"
         placeholder='Valor Máximo' />
 
