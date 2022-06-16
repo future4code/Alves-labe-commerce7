@@ -12,8 +12,8 @@ text-align: Center;`
 export default class Filters extends Component {
 
   state = {
-    ValorInputContadorMin: 0,
-    ValorInputContadorMax: 0,
+    ValorInputContadorMin: "",
+    ValorInputContadorMax: "",
     ValorInputPesquisarPorNome: "",
   }
 
@@ -45,7 +45,7 @@ export default class Filters extends Component {
         <label for="ValorMínimo">Valor Mínimo:</label>
         <input OnChange={this.OnChangeValorInputContadorMin} 
         type="Number" 
-        value={this.state.ValorInputContadorMin}
+        // value={this.state.ValorInputContadorMin}
         id="ValorMínimo"
         placeholder='Valor Mínimo' />
 
@@ -59,7 +59,7 @@ export default class Filters extends Component {
         <label for="BuscaProdutos">Busca:</label>
         <input OnChange={this.OnChangeValorInputPesquisaPorNome} 
         type="text" 
-        value={this.state.ValorInputPesquisarPorNome}
+        // value={this.state.ValorInputPesquisarPorNome}
         id="BuscaProdutos"
         placeholder='Buscar Produtos' />
 
