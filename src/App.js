@@ -1,8 +1,8 @@
 import React from 'react';
 import Depositions from './components/Depositions.jsx';
 import Filters from './components/Filters.jsx';
-import Products from './components/Products';
-import ProductsCard from './components/ProductsCard';
+import {Products} from './components/Products';
+import {ProductsCard}  from './components/ProductsCard';
 import ShoppingCart from './components/ShoppingCart';
 import ShoppingCartItem from './components/ShoppingCartItem'
 
