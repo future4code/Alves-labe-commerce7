@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
+import Cart from './Cart'
 
 export default class Header extends Component {
     state = {

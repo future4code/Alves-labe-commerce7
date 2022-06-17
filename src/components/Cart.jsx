@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { isElementOfType } from 'react-dom/test-utils'
+import ItemsCart from './ItemsCart'
 
 export default class Cart extends Component {
     state = {

@@ -4,6 +4,7 @@ import { ProductsCard } from './components/ProductsCard';
 import ProductsList from '../src/data/productsList.json'
 import styled from 'styled-components';
 import Header from './components/Header'
+import Filters from './components/Filters';
 
 const Container = styled.div`
   display: flex;
@@ -88,9 +89,6 @@ class App extends React.Component {
 
   render() {
 
-
-
-
     let listProduct = this.state.products
       .filter(product => {
         return product.name.toLowerCase().includes(this.state.search.toLowerCase())
@@ -118,27 +116,22 @@ class App extends React.Component {
       <div>
 
         <Header />
+        <Filters 
+        onChangeValueMin={this.onChangeValueMin}
+        onChangeValueMax={this.onChangeValueMax}
+        valueMin={this.state.valueMin}
+        valueMax={this.state.valueMax}
+        onChangeSearch={this.onChangeSearch}
+        search={this.state.search}
+        order={this.state.order}
+        onChangeOrder={this.onChangeOrder}
+        />
 
+       
         <Container>
-
-
-          <label for="ValorMínimo">Valor Mínimo:</label>
-          <input OnChange={this.onChangeValueMin} type="number" value={this.valueMin} id="ValorMínimo" placeholder='Valor Mínimo' />
-          <label for="ValorMáximo">Valor Máximo:</label>
-          <input OnChange={this.onChangeValueMax} type="number" value={this.valueMax} id="ValorMáximo" placeholder='Valor Máximo' />
-          <label for="BuscaProdutos">Busca:</label>
-          <input OnChange={this.onChangeSearch} type="text" value={this.search} id="BuscaProdutos" placeholder='Buscar Produtos' />
-
-          <select name="select" value={this.order} onChange={this.onChangeOrder}>
-            <option value="0">Crescente</option>
-            <option value="1">Decrescente</option>
-          </select>
+          
 
           {listProduct}
-
-
-
-
 
         </Container>
       </div>

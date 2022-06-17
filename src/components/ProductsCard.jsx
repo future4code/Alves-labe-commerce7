@@ -35,10 +35,10 @@ export class ProductsCard extends Component {
       <ContainerCard>
           <HeaderCard>
             {this.props.product.name}
+            R${this.props.product.value}
           </HeaderCard>
           <ImageCard 
           src={this.props.product.image}/>
-
            
       </ContainerCard>
       </ContainerProducts>
