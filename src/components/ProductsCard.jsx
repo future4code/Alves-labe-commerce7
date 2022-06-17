@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import ShoppingCartItem from './ShoppingCartItem'
 
 
 
@@ -15,15 +16,7 @@ const HeaderCard = styled.h1`
   text-align: center;
 
 `
-
-const OnChangeClickAdd = () => {
-  return console.log('clicou')
-  
-    
-    
-}
 export class ProductsCard extends Component {
-  
   render() {
     return (
       <ContainerCard>
@@ -32,7 +25,6 @@ export class ProductsCard extends Component {
           </HeaderCard>
             {this.props.text}
             {this.props.value}
-          <button onClick={OnChangeClickAdd}>Adicionar ao carrinho</button>
       </ContainerCard>
 
     )
