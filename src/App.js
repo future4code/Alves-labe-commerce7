@@ -3,6 +3,8 @@ import React from 'react';
 import { ProductsCard } from './components/ProductsCard';
 import ProductsList from '../src/data/productsList.json'
 import styled from 'styled-components';
+import Header from './components/Header'
+import Filters from './components/Filters';
 
 const Container = styled.div`
   display: flex;
@@ -24,26 +26,46 @@ class App extends React.Component {
     stateButton: false,
     order: 1,
     search: ''
-
   }
 
-  onClickAddCar = (id) => {
-    // this.state.products.map((product) => {
-    //   if(product.id === id){
-    //     this.state.filterCar = [...this.state.filterCar, product]
-    //     this.setState({filterCar: this.state.filterCar})
-    //     product.quant = product.quant + 1
-    //     this.setState({totalCar: this.state.totalCar + product.value})
-
-    //   }
-    // })
+  onClickAdd = (id) => {
+    this.state.products.map((product) => {
+      if (product.id === id) {
+        this.state.filterCar = [...this.state.filterCar, product]
+        this.setState({ filterCar: this.state.filterCar })
+        product.quant = product.quant + 1
+        this.setState({ totalCar: this.state.totalCar + product.value })
+      }
+    })
     console.log('clicou')
+  }
+
+  onClickDelete = (id) => {
+    this.state.products.map((product) => {
+      if (product.id === id) {
+        if (product.quant > 0) {
+          product.quant = product.quant - 1
+          this.setState({
+            totalCar: this.state.totalCar - product.value
+          })
+        }
+        if (product.quant <= 0) {
+          let newListProducts = this.state.filterCar.filter((product) => {
+            return product.id !== id
+          })
+          this.state.filterCar = newListProducts
+          this.setState({
+            filterCar: this.state.filterCar
+          })
+        }
+      }
+    })
   }
 
   onChangeValueMin = (event) => {
     this.setState({
       valueMin: event.target.value,
-      
+
     })
   }
   onChangeValueMax = (event) => {
@@ -58,35 +80,61 @@ class App extends React.Component {
     })
   }
 
+  onChangeOrder = (event) => {
+    this.setState({
+      order: event.target.value
+    })
+  }
+
 
   render() {
+
     let listProduct = this.state.products
-    .map((product) => {
-      return(
-        <CardConteiner>
-          <ProductsCard
-          key={product.id} 
-          product={product}
-          />
-          <button onClick = {() => this.onClickAddCar(this.state.products.id)}>Comprar</button>
-        </CardConteiner>
-      )
-    })
+      .filter(product => {
+        return product.name.toLowerCase().includes(this.state.search.toLowerCase())
+      })
+      .filter(product => {
+        return this.state.valueMin === "" || product.value >= this.state.valueMin
+      })
+      .filter(product => {
+        return this.state.valueMax === "" || product.value <= this.state.valueMax
+      })
+      .sort((productA, productB) => this.state.order === 0 ? productA.value - productB.value : productB.value - productA.value)
+      .map((product) => {
+        return (
+          <CardConteiner>
+            <ProductsCard
+              key={product.id}
+              product={product}
+            />
+            <button onClick={() => this.onClickAdd(this.state.products.id)}>Comprar</button>
+          </CardConteiner>
+        )
+      })
+
     return (
-      
-      <Container>
-        <label for="ValorMínimo">Valor Mínimo:</label> 
-        <input OnChange={this.onChangeValueMin} type="number" value={this.valueMin} id="ValorMínimo" placeholder='Valor Mínimo'/>
-        <label for="ValorMáximo">Valor Máximo:</label>
-        <input OnChange={this.onChangeValueMax} type="number" value={this.valueMax} id="ValorMáximo" placeholder='Valor Máximo' />
-        <label for="BuscaProdutos">Busca:</label>
-        <input OnChange={this.onChangeSearch} type="text" value={this.search} id="BuscaProdutos" placeholder='Buscar Produtos' />
-        
-        {listProduct}
-        
+      <div>
+
+        <Header />
+        <Filters 
+        onChangeValueMin={this.onChangeValueMin}
+        onChangeValueMax={this.onChangeValueMax}
+        valueMin={this.state.valueMin}
+        valueMax={this.state.valueMax}
+        onChangeSearch={this.onChangeSearch}
+        search={this.state.search}
+        order={this.state.order}
+        onChangeOrder={this.onChangeOrder}
+        />
+
+       
+        <Container>
+          
+
+          {listProduct}
 
         </Container>
-     
+      </div>
     );
   }
 }
