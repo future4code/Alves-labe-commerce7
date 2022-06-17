@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "name": "Pacote Lua 15 dias",
+      "text": "Que tal passar as férias na Lua? Nosso pacote inclui, translado até a estação da Nasa, passagem classe ecônomica no ônibus espacial Columbia",
+      "value": 50.000,
+      "image": "https://images.unsplash.com/photo-1446941611757-91d2c3bd3d45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=502&q=80",
+      "quant": 0
+    },
+    {
+      "id": 2,
+      "name": "Pacote Saturno 15 dias",
+      "text": "Que tal passar as férias em Saturno. Nosso pacote inclui, translado até a estação da Nasa, passagem classe ecônomica no ônibus espacial Columbia",
+      "value": 50.000,
+      "image": "https://images.unsplash.com/photo-1637984135921-301a7d39e3b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1015&q=80",
+      "quant": 0
+    },
+    {
+      "id": 3,
+      "name": "Pacote Sol 15 dias",
+      "text": "Que tal fugir do frio e se bronzear direto na fonte??. Nosso pacote inclui, translado até a estação da Nasa, passagem classe ecônomica no ônibus espacial Columbia",
+      "value": 50.000,
+      "image": "https://images.unsplash.com/photo-1614642264762-d0a3b8bf3700?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+      "quant": 0
+    },
+    {
+      "id": 4,
+      "name": "Cruzeiro interestelas",
+      "text": "Que tal passar os dias em alto céu?. Nosso pacote inclui, translado até a estação da Nasa, passagem classe ecônomica no ônibus espacial Columbia",
+      "value": 50.000,
+      "image": "https://images.unsplash.com/photo-1636828982375-a4ec8b809e5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      "quant": 0
+    }
+  ]
+  
