@@ -12,7 +12,7 @@ const ContainerCard = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid black;
-  max-width: 250px;
+  max-width: 300px;
   height: 350px;
   
 `
@@ -20,6 +20,13 @@ const ContainerCard = styled.div`
 const HeaderCard = styled.div`
   text-align: center;
 
+`
+const TextCard = styled.div`
+  text-align: center;
+
+`
+const ValueCard = styled.div`
+  text-align: center;
 `
 
 const ImageCard = styled.img`
@@ -35,10 +42,15 @@ export class ProductsCard extends Component {
       <ContainerCard>
           <HeaderCard>
             {this.props.product.name}
-            R${this.props.product.value}
           </HeaderCard>
           <ImageCard 
           src={this.props.product.image}/>
+          <TextCard>
+          {this.props.product.text}
+          </TextCard>
+          <ValueCard>
+          R${this.props.product.value}
+          </ValueCard>
            
       </ContainerCard>
       </ContainerProducts>

@@ -8,12 +8,23 @@ import Filters from './components/Filters';
 
 const Container = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   border: 1px red solid;
   width: 100%;
+  background-color: #49bab5;
+
 `
 const CardConteiner = styled.div`
-  border: 1px solid blue;
-  width: 30%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+`
+const ButtonCard = styled.button`
+  padding: 10px;
+  background-color: #ed4e45;
+  border: none;
+  font-size: large;
 `
 
 class App extends React.Component {
@@ -107,7 +118,7 @@ class App extends React.Component {
               key={product.id}
               product={product}
             />
-            <button onClick={() => this.onClickAdd(this.state.products.id)}>Comprar</button>
+            <ButtonCard onClick={() => this.onClickAdd(this.state.products.id)}>Adicionar ao carrinho</ButtonCard>
           </CardConteiner>
         )
       })
