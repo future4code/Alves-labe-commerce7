@@ -5,6 +5,8 @@ import Saturn from './img/saturn.jpg'
 import Sun from './img/sun.jpg'
 import SpaceShip from './img/spaceShip.jpg'
 import { ProductsCard } from './ProductsCard'
+import ShoppingCart from './ShoppingCart'
+import ShoppingCartItem from './ShoppingCartItem'
 
 const ContainerProducts = styled.div`
   display: flex;
@@ -44,9 +46,11 @@ export class Products extends Component {
       image: <img src={SpaceShip} />
     },
   ]
+
   render() {
     const componentsCard = this.listaCards.map((card) => {
       return (
+        <div>
         <ProductsCard key={card.id}
         id = {card.id}
         name = {card.name}
@@ -54,6 +58,9 @@ export class Products extends Component {
         value = {card.value}
         image = {card.image}
         />
+        <ShoppingCartItem onClick={this.onClickAdd()}/>
+      
+      </div>
       )
     })
     return (
