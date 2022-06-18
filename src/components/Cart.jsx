@@ -1,5 +1,28 @@
 import React, { Component } from 'react'
 import ItemsCart from './ItemsCart'
+import styled from 'styled-components'
+
+const Shopping = styled.div`
+    position: fixed;
+    right: 1%;
+    top:10rem;
+    min-height: 20%;
+    max-height: 100%;
+    width: 30%;
+    background-color: #b8eeec;
+    display:flex;
+    color:black;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.2);
+`
+
+
+
+
 
 export default class Cart extends Component {
     state = {
@@ -31,8 +54,8 @@ export default class Cart extends Component {
     })
 
     return (
-      <div>
-          <h1>Carrinho</h1>
+      <Shopping>
+          <h1>Carrinho de Compras</h1>
           <div>
               {componentItem}
           </div>
@@ -40,7 +63,7 @@ export default class Cart extends Component {
               {this.props.items.lenght === 0 ? 'Carrinho Vazio' : `Valor Total: R$ ${this.props.totalCar}`}
           </div>
           <button>Finalizar Compra</button>
-      </div>
+      </Shopping>
     )
   }
 }
