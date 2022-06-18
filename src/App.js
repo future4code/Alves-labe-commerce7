@@ -48,7 +48,7 @@ class App extends React.Component {
         this.setState({ totalCar: this.state.totalCar + product.value })
       }
     })
-    alert(`Seu Produto foi adicionado ao Carrinho`)
+    alert(`O produto foi adicionado ao carrinho`)
   }
 
   onClickDelete = (id) => {
