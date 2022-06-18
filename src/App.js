@@ -35,7 +35,7 @@ class App extends React.Component {
     valueMax: '',
     totalCar: 0,
     stateButton: false,
-    order: 1,
+    order: "Crescente",
     search: ''
   }
 
@@ -48,7 +48,7 @@ class App extends React.Component {
         this.setState({ totalCar: this.state.totalCar + product.value })
       }
     })
-    console.log('clicou')
+    alert(`Seu Produto foi adicionado ao Carrinho`)
   }
 
   onClickDelete = (id) => {
@@ -110,7 +110,7 @@ class App extends React.Component {
       .filter(product => {
         return this.state.valueMax === "" || product.value <= this.state.valueMax
       })
-      .sort((productA, productB) => this.state.order === 0 ? productA.value - productB.value : productB.value - productA.value)
+      .sort((productA, productB) => this.state.order === "Crescente" ? productA.value - productB.value : productB.value - productA.value)
       .map((product) => {
         return (
           <CardConteiner>
@@ -118,15 +118,16 @@ class App extends React.Component {
               key={product.id}
               product={product}
             />
-            <ButtonCard onClick={() => this.onClickAdd(this.state.products.id)}>Adicionar ao carrinho</ButtonCard>
+            <ButtonCard onClick={() => this.onClickAdd(product.id)}>Adicionar ao carrinho</ButtonCard>
           </CardConteiner>
         )
       })
 
     return (
       <div>
+        <Header onClick={this.onClickDelete} filterCar={this.state.filterCar} totalCar={this.state.totalCar}/>
 
-        <Header />
+        
         <Filters 
         onChangeValueMin={this.onChangeValueMin}
         onChangeValueMax={this.onChangeValueMax}
@@ -138,13 +139,14 @@ class App extends React.Component {
         onChangeOrder={this.onChangeOrder}
         />
 
-       
+       <label>{`Quantidade de Produtos: ${listProduct.length}`}</label>
         <Container>
           
 
           {listProduct}
 
         </Container>
+
       </div>
     );
   }

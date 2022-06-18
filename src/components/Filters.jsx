@@ -14,8 +14,8 @@ export default class Filters extends Component {
           <input onChange={this.props.onChangeSearch} type="text" value={this.props.search} id="BuscaProdutos" placeholder='Buscar Produtos' />
           </label>
           <select name="select" value={this.props.order} onChange={this.props.onChangeOrder}>
-            <option value="0">Crescente</option>
-            <option value="1">Decrescente</option>
+            <option value="Crescente">Crescente</option>
+            <option value="Decrescente">Decrescente</option>
           </select>
       </div>
     )

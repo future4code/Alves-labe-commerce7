@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { AiOutlineShoppingCart } from 'react-icons/ai'
+// import { AiOutlineShoppingCart } from 'react-icons/ai'
 import Cart from './Cart'
 
 export default class Header extends Component {
@@ -12,7 +12,6 @@ export default class Header extends Component {
         this.setState({
             shopping: this.state.shopping
         })
-        console.log('oi')
     }
     render() {
         let componentCart
@@ -22,7 +21,7 @@ export default class Header extends Component {
         return (
             <div>
 
-                <button onClick={this.showCart}><AiOutlineShoppingCart /></button>
+                <button onClick={this.showCart}>Clicar</button>
 
                 {componentCart}
             </div>
