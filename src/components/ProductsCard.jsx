@@ -11,7 +11,7 @@ const ContainerProducts = styled.div`
 const ContainerCard = styled.div`
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  box-shadow: 2px 2px 2px 1px rgba(238, 152, 103, 0.973);
   max-width: 300px;
   height: 350px;
   

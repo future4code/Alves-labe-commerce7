@@ -5,15 +5,15 @@ import ProductsList from '../src/data/productsList.json'
 import styled from 'styled-components';
 import Header from './components/Header'
 import Filters from './components/Filters';
+import ImagemFundo from './components/./img/essavai.jpg'
 
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  border: 1px red solid;
   width: 100%;
-  background-color: #49bab5;
-
+  background-image: url(${ImagemFundo});
+  color: orange;
 `
 const CardConteiner = styled.div`
   padding: 20px;
@@ -22,7 +22,7 @@ const CardConteiner = styled.div`
 `
 const ButtonCard = styled.button`
   padding: 10px;
-  background-color: #ed4e45;
+  background-color: rgba(238, 152, 103, 0.973);
   border: none;
   font-size: large;
 `
@@ -125,27 +125,31 @@ class App extends React.Component {
 
     return (
       <div>
-        <Header onClick={this.onClickDelete} filterCar={this.state.filterCar} totalCar={this.state.totalCar}/>
+        <Header onClick={this.onClickDelete} filterCar={this.state.filterCar} totalCar={this.state.totalCar} />
 
-        
-        <Filters 
-        onChangeValueMin={this.onChangeValueMin}
-        onChangeValueMax={this.onChangeValueMax}
-        valueMin={this.state.valueMin}
-        valueMax={this.state.valueMax}
-        onChangeSearch={this.onChangeSearch}
-        search={this.state.search}
-        order={this.state.order}
-        onChangeOrder={this.onChangeOrder}
+
+        <Filters
+          onChangeValueMin={this.onChangeValueMin}
+          onChangeValueMax={this.onChangeValueMax}
+          valueMin={this.state.valueMin}
+          valueMax={this.state.valueMax}
+          onChangeSearch={this.onChangeSearch}
+          search={this.state.search}
+          order={this.state.order}
+          onChangeOrder={this.onChangeOrder}
         />
-
-       <label>{`Quantidade de Produtos: ${listProduct.length}`}</label>
         <Container>
-          
+          <label>{`Quantidade de Produtos: ${listProduct.length}`}</label>
+
+
 
           {listProduct}
 
         </Container>
+
+        <footer>
+
+        </footer>
 
       </div>
     );

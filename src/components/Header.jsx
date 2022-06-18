@@ -2,22 +2,25 @@ import React, { Component } from 'react'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import Cart from './Cart'
 import styled from 'styled-components'
-import Imagem from './img/imgheader.jpg'
-import Carrinho from './img/carrinho-foguete-arq.png'
+import Imagem from './img/imgdois.jpg'
+import Logo from './img/logospacetrip.png'
+import Carrinho from './img/test1.png'
 
 const HeaderContainer = styled.header`
     width:100%;
-    height: 10rem;
+    height: 12rem;
     display:flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     background-image: url(${Imagem});
 `
 
 const Titulo = styled.h1`
-    color: #c38b7d;
     justify-content: space-around;
     display: flex;
+    img {
+        width: 37%;
+    }
 `
 
 const ButtonDiv = styled.div`
@@ -29,13 +32,13 @@ const CartButton = styled.button`
     position: fixed;
     border: none;;
     justify-content: space-around;
-    color: #c38b7d;
+    color: white;
     display: flex;
     align-items: center;
     background: transparent;
     cursor: pointer;
-        svg {
-            font-size: 5rem;
+        img {
+            width: 30%;
         }
 `
 
@@ -66,11 +69,11 @@ export default class Header extends Component {
         return (
             <HeaderContainer>
                 <Container>
-                    <Titulo>StarTrip Viagens</Titulo>
+                    <Titulo><img src={Logo} alt="logo" /></Titulo>
 
                 </Container>
                 <ButtonDiv>
-                    <CartButton onClick={this.showCart}> <AiOutlineShoppingCart/> </CartButton>
+                    <CartButton onClick={this.showCart}> <img src={Carrinho}/> </CartButton>
                 </ButtonDiv>
                 {componentCart}
             </HeaderContainer>
