@@ -118,15 +118,16 @@ class App extends React.Component {
               key={product.id}
               product={product}
             />
-            <ButtonCard onClick={() => this.onClickAdd(this.state.products.id)}>Adicionar ao carrinho</ButtonCard>
+            <ButtonCard onClick={() => this.onClickAdd(product.id)}>Adicionar ao carrinho</ButtonCard>
           </CardConteiner>
         )
       })
 
     return (
       <div>
+        <Header onClick={this.onClickDelete} filterCar={this.state.filterCar} totalCar={this.state.totalCar}/>
 
-        <Header />
+        
         <Filters 
         onChangeValueMin={this.onChangeValueMin}
         onChangeValueMax={this.onChangeValueMax}
@@ -138,13 +139,14 @@ class App extends React.Component {
         onChangeOrder={this.onChangeOrder}
         />
 
-       
+       <label>{`Quantidade de Produtos: ${listProduct.length}`}</label>
         <Container>
           
 
           {listProduct}
 
         </Container>
+
       </div>
     );
   }

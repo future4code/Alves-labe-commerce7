@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { TbShoppingCartX } from 'react-icons/tb'
+// import { TbShoppingCartX } from 'react-icons/tb'
 
 export default class ItemsCart extends Component {
  
@@ -9,7 +9,7 @@ export default class ItemsCart extends Component {
           <div>{this.props.quant} X </div>
           <div>{this.props.name}</div>
           <div>R${this.props.value}</div>
-          <button onClick={() => this.props.onClick(this.props.id)}><TbShoppingCartX /></button>
+          <button onClick={() => this.props.onClick(this.props.id)}>Compra</button>
       </div>
     )
   }
