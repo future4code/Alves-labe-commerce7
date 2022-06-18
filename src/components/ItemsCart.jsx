@@ -9,7 +9,7 @@ export default class ItemsCart extends Component {
           <div>{this.props.quant} X </div>
           <div>{this.props.name}</div>
           <div>R${this.props.value}</div>
-          <button onClick={() => this.props.onClick(this.props.id)}>Compra</button>
+          <button onClick={() => this.props.onClick(this.props.id)}>Deletar</button>
       </div>
     )
   }

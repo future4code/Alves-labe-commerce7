@@ -12,7 +12,6 @@ export default class Header extends Component {
         this.setState({
             shopping: this.state.shopping
         })
-        console.log('oi')
     }
     render() {
         let componentCart

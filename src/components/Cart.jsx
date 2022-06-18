@@ -4,15 +4,15 @@ import ItemsCart from './ItemsCart'
 export default class Cart extends Component {
     state = {
         cart: this.props.items,
-        quant: 0
     }
 
-    delCart = (id) => {
+    delCart = () => {
         let newCartList = []
         this.setState({
             cart: newCartList
         })
     }
+
 
   render() {
     let componentItem = this.props.items.filter((item, index) => this.props.items.indexOf(item) == index).map((element) =>  {
