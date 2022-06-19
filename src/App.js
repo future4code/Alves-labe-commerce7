@@ -96,6 +96,8 @@ class App extends React.Component {
     })
   }
 
+
+
   onChangeValueMin = (event) => {
     this.setState({
       valueMin: event.target.value,
@@ -118,6 +120,28 @@ class App extends React.Component {
     this.setState({
       order: event.target.value
     })
+  }
+
+  storageData = () => {
+    localStorage.setItem("car", JSON.stringify(this.state.filterCar))
+  }
+
+  getData = () => {
+     const filter = localStorage.getItem("car")
+
+     const convertCar = JSON.parse(filter)
+
+     convertCar && this.setState({filterCar: convertCar})
+
+
+  }
+
+  componentDidMount() {
+    this.getData()
+  }
+
+  componentDidUpdate () {
+    this.storageData()
   }
 
   render() {
