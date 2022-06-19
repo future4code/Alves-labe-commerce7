@@ -26,7 +26,7 @@ Fizemos um footer em que o usuário encontra os ícones das redes sociais. Clica
 Fizemos também um seção com depoimentos de usuários que já utilizaram o serviço.
 
 Utilizamos a seguinte paleta de cores gerada através da roda de cores do site da Adobe:
-![alt text] (./imagemmd/image.png)
+![Paleta Adobe] (./imagem-md/image.png)
 
 # Conheça nosso E-commerce
 
@@ -34,8 +34,8 @@ Utilizamos a seguinte paleta de cores gerada através da roda de cores do site d
 
 # Integrantes
 
-Lucas Magalhães
-Nicole Prim
+Lucas Magalhães,
+Nicole Prim e 
 Raquel Baptista Burger
 
 # Desenvolvimento do projeto
