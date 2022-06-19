@@ -7,6 +7,9 @@ import Header from './components/Header'
 import Filters from './components/Filters';
 import ImagemFundo from './components/./img/essavai.jpg'
 import Depositions from './components/Depositions';
+import Insta from './components/img/insta.png';
+import Face from './components/img/face.png';
+import Twitter from './components/img/twitter.png';
 
 const Container = styled.div`
   display: flex;
@@ -37,7 +40,6 @@ const QuantSection = styled.section`
   background-color: rgb(73, 186, 181, 0.3);
   padding: 5px;
   color: #Ed4e45;
-
 `
 
 const ButtonCard = styled.button`
@@ -49,6 +51,48 @@ const ButtonCard = styled.button`
   border: none;
   font-size: large;
 `
+
+const Footer = styled.div`
+  background-color: rgb(73, 186, 181, 0.5);
+  height: 11rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+`
+
+const DivRedes = styled.div`
+    padding-left: 2%;
+    width: 10%;
+    cursor: pointer;
+    display: flex;
+  img{
+	width: 60%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+`
+
+const Desenvolvimento = styled.div`
+  display: flex;
+  p {
+    font-weight: bold;
+  }
+`
+
+const Contato = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3%;
+  padding-top: 1%;
+  width: 100%;
+  background-color: rgb(73, 186, 181, 0.5)
+  
+`
+
+
+
 
 class App extends React.Component {
   state = {
@@ -96,8 +140,6 @@ class App extends React.Component {
     })
   }
 
-
-
   onChangeValueMin = (event) => {
     this.setState({
       valueMin: event.target.value,
@@ -127,20 +169,18 @@ class App extends React.Component {
   }
 
   getData = () => {
-     const filter = localStorage.getItem("car")
+    const filter = localStorage.getItem("car")
 
-     const convertCar = JSON.parse(filter)
+    const convertCar = JSON.parse(filter)
 
-     convertCar && this.setState({filterCar: convertCar})
-
-
+    convertCar && this.setState({ filterCar: convertCar })
   }
 
   componentDidMount() {
     this.getData()
   }
 
-  componentDidUpdate () {
+  componentDidUpdate() {
     this.storageData()
   }
 
@@ -191,13 +231,34 @@ class App extends React.Component {
             {listProduct}
           </CardInContainer>
         </Container>
-        <Depositions>
+        <Depositions />
+        <Footer>
+          <DivRedes>
+            <a href="https://www.instagram.com/" target="_blank">
+              <img src={Insta} alt="ícone instagram" />
+            </a>
+            <a href="https://pt-br.facebook.com/" target="_blank">
+              <img src={Face} alt="ícone facebook" />
+            </a>
+            <a href="https://twitter.com/" target="_blank">
+              <img src={Twitter} alt="ícone twitter" />
+            </a>
+          </DivRedes>
 
-        </Depositions>
-        <footer>
+          <Desenvolvimento>
+            <ul>
+            <p>Desenvolvido por:</p>
+            <li>Lucas Magalhães</li>
+            <li>Nicole Prim</li>
+            <li>Raquel Baptista Burger</li>
+            </ul>
+          </Desenvolvimento>
 
-        </footer>
-
+        </Footer>
+        <Contato>
+            <h3>Onde nos encontrar:</h3>
+            <p>Sistema Solar, Via Láctea, Aglomerado de Virgem, Superaglomerado Laniakea, Universo Observável </p>
+          </Contato>
       </div>
     );
   }
