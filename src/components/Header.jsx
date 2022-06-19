@@ -29,7 +29,7 @@ const CartButton = styled.button`
     background: transparent;
     cursor: pointer;
         img {
-            width: 50%;
+            max-width: 40%;
         }
 `
 
