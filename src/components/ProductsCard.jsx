@@ -7,7 +7,7 @@ const ContainerCard = styled.div`
   flex-direction: column;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  width: 300px;
+  width: 270px;
   height: 350px;
   background-color: rgb(69, 156, 237, 0.3);
   
