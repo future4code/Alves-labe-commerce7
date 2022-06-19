@@ -19,6 +19,7 @@ const Itens = styled.div`
 
 `
 
+
 export default class ItemsCart extends Component {
  
   render() {

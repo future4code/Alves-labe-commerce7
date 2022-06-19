@@ -6,23 +6,46 @@ import styled from 'styled-components';
 import Header from './components/Header'
 import Filters from './components/Filters';
 import ImagemFundo from './components/./img/essavai.jpg'
+import Depositions from './components/Depositions';
 
 const Container = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  padding-top: 30px;
   width: 100%;
   background-image: url(${ImagemFundo});
-  color: orange;
+  color: #Ed4e45;
+`
+const CardInContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `
 const CardConteiner = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 `
+
+const FilterContainer = styled.div`
+  margin-top: 100px;
+  margin-left: 10px;
+`
+const QuantSection = styled.section`
+  text-align: center;
+  display: block;
+  background-color: rgb(73, 186, 181, 0.3);
+  padding: 5px;
+  color: #Ed4e45;
+
+`
+
 const ButtonCard = styled.button`
   padding: 10px;
-  background-color: rgba(238, 152, 103, 0.973);
+  border-end-end-radius: 10px;
+  border-end-start-radius: 10px;
+  background-color: #c3887d;
+  box-shadow: 2px 2px 2px 1px rgb(69, 156, 237, 0.2);
   border: none;
   font-size: large;
 `
@@ -97,7 +120,6 @@ class App extends React.Component {
     })
   }
 
-
   render() {
 
     let listProduct = this.state.products
@@ -127,26 +149,27 @@ class App extends React.Component {
       <div>
         <Header onClick={this.onClickDelete} filterCar={this.state.filterCar} totalCar={this.state.totalCar} />
 
-
-        <Filters
-          onChangeValueMin={this.onChangeValueMin}
-          onChangeValueMax={this.onChangeValueMax}
-          valueMin={this.state.valueMin}
-          valueMax={this.state.valueMax}
-          onChangeSearch={this.onChangeSearch}
-          search={this.state.search}
-          order={this.state.order}
-          onChangeOrder={this.onChangeOrder}
-        />
+        <QuantSection>{`Quantidade de Produtos: ${listProduct.length}`}</QuantSection>
         <Container>
-          <label>{`Quantidade de Produtos: ${listProduct.length}`}</label>
-
-
-
-          {listProduct}
-
+          <FilterContainer>
+            <Filters
+              onChangeValueMin={this.onChangeValueMin}
+              onChangeValueMax={this.onChangeValueMax}
+              valueMin={this.state.valueMin}
+              valueMax={this.state.valueMax}
+              onChangeSearch={this.onChangeSearch}
+              search={this.state.search}
+              order={this.state.order}
+              onChangeOrder={this.onChangeOrder}
+            />
+          </FilterContainer>
+          <CardInContainer>
+            {listProduct}
+          </CardInContainer>
         </Container>
+        <Depositions>
 
+        </Depositions>
         <footer>
 
         </footer>
