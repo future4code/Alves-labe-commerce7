@@ -1,32 +1,6 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
-import Imagem from './img/imgdois.jpg'
+import { Filtro, Form, Inputs, Select } from "./FiltersStyled.jsx";
 
-const Filtro = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-image: url(${Imagem});
-  height: 7rem;
-  color: #c3887d;
-  font-weight: bold;
-`
-
-const Form = styled.label`
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-`
-
-const Inputs = styled.input`
-  background: transparent;
-  padding: 5px;
-  color: #Ed4e45;
-`
-const Select = styled.select`
-  padding: 5px;
-
-`
 
 export default class Filters extends Component {
   render() {

@@ -1,94 +1,13 @@
-import './App.css';
 import React from 'react';
 import { ProductsCard } from './components/ProductsCard';
 import ProductsList from '../src/data/productsList.json'
-import styled from 'styled-components';
 import Header from './components/Header'
 import Filters from './components/Filters';
-import ImagemFundo from './components/./img/essavai.jpg'
 import Depositions from './components/Depositions';
 import Insta from './components/img/insta.png';
 import Face from './components/img/face.png';
 import Twitter from './components/img/twitter.png';
-
-const Container = styled.div`
-  display: flex;
-  padding-top: 30px;
-  width: 100%;
-  background-image: url(${ImagemFundo});
-  color: #Ed4e45;
-`
-const CardInContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-`
-const CardConteiner = styled.div`
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-`
-
-const FilterContainer = styled.div`
-  margin-top: 100px;
-  margin-left: 10px;
-`
-const QuantSection = styled.section`
-  text-align: center;
-  display: block;
-  background-color: rgb(73, 186, 181, 0.3);
-  padding: 5px;
-  color: #Ed4e45;
-`
-
-const ButtonCard = styled.button`
-  padding: 10px;
-  border-end-end-radius: 10px;
-  border-end-start-radius: 10px;
-  background-color: #c3887d;
-  box-shadow: 2px 2px 2px 1px rgb(69, 156, 237, 0.2);
-  border: none;
-  font-size: large;
-`
-
-const Footer = styled.div`
-  background-color: rgb(73, 186, 181, 0.5);
-  height: 11rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-
-`
-
-const DivRedes = styled.div`
-    padding-left: 2%;
-    width: 10%;
-    cursor: pointer;
-    display: flex;
-  img{
-	width: 60%;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  }
-`
-
-const Desenvolvimento = styled.div`
-  display: flex;
-  p {
-    font-weight: bold;
-  }
-`
-
-const Contato = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 3%;
-  padding-top: 1%;
-  width: 100%;
-  background-color: rgb(73, 186, 181, 0.5);
-`
+import {Container, CardInContainer, CardConteiner, FilterContainer, QuantSection, ButtonCard, Footer, DivRedes, Contato, Desenvolvimento} from "./styledApp"
 
 class App extends React.Component {
   state = {
@@ -243,18 +162,18 @@ class App extends React.Component {
 
           <Desenvolvimento>
             <ul>
-              <p>Desenvolvido por:</p>
-              <li>Lucas Magalhães</li>
-              <li>Nicole Prim</li>
-              <li>Raquel Baptista Burger</li>
+            <p>Desenvolvido por:</p>
+            <li>Lucas Magalhães</li>
+            <li>Nicole Prim</li>
+            <li>Raquel Baptista Burger</li>
             </ul>
           </Desenvolvimento>
 
         </Footer>
         <Contato>
-          <h3>Onde nos encontrar:</h3>
-          <p>Sistema Solar, Via Láctea, Aglomerado de Virgem, Superaglomerado Laniakea, Universo Observável </p>
-        </Contato>
+            <h3>Onde nos encontrar:</h3>
+            <p>Sistema Solar, Via Láctea, Aglomerado de Virgem, Superaglomerado Laniakea, Universo Observável </p>
+          </Contato>
       </div>
     );
   }
