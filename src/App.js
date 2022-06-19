@@ -87,12 +87,8 @@ const Contato = styled.div`
   padding-bottom: 3%;
   padding-top: 1%;
   width: 100%;
-  background-color: rgb(73, 186, 181, 0.5)
-  
+  background-color: rgb(73, 186, 181, 0.5);
 `
-
-
-
 
 class App extends React.Component {
   state = {
@@ -247,18 +243,18 @@ class App extends React.Component {
 
           <Desenvolvimento>
             <ul>
-            <p>Desenvolvido por:</p>
-            <li>Lucas Magalhães</li>
-            <li>Nicole Prim</li>
-            <li>Raquel Baptista Burger</li>
+              <p>Desenvolvido por:</p>
+              <li>Lucas Magalhães</li>
+              <li>Nicole Prim</li>
+              <li>Raquel Baptista Burger</li>
             </ul>
           </Desenvolvimento>
 
         </Footer>
         <Contato>
-            <h3>Onde nos encontrar:</h3>
-            <p>Sistema Solar, Via Láctea, Aglomerado de Virgem, Superaglomerado Laniakea, Universo Observável </p>
-          </Contato>
+          <h3>Onde nos encontrar:</h3>
+          <p>Sistema Solar, Via Láctea, Aglomerado de Virgem, Superaglomerado Laniakea, Universo Observável </p>
+        </Contato>
       </div>
     );
   }
