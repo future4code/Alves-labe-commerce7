@@ -2,35 +2,42 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 
-
-const ContainerProducts = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-`
 const ContainerCard = styled.div`
   display: flex;
   flex-direction: column;
-  box-shadow: 2px 2px 2px 1px rgba(238, 152, 103, 0.973);
-  max-width: 300px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 300px;
   height: 350px;
+  background-color: rgb(69, 156, 237, 0.3);
   
 `
 
 const HeaderCard = styled.div`
   text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
 `
 const TextCard = styled.div`
   text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
 `
 const ValueCard = styled.div`
   text-align: center;
+  color: #49bab5;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 10px;
 `
 
 const ImageCard = styled.img`
-  max-height: 30%;
+  width: auto;
+  max-height: 150px;
   
 `
 
@@ -38,7 +45,6 @@ const ImageCard = styled.img`
 export class ProductsCard extends Component {
   render() {
     return (
-      <ContainerProducts>
       <ContainerCard>
           <HeaderCard>
             {this.props.product.name}
@@ -53,7 +59,6 @@ export class ProductsCard extends Component {
           </ValueCard>
            
       </ContainerCard>
-      </ContainerProducts>
     )
   }
 }

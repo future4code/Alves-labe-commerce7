@@ -3,17 +3,29 @@ import styled from 'styled-components'
 import Imagem from './img/imgdois.jpg'
 
 const Filtro = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background-image: url(${Imagem});
   height: 7rem;
+  color: #c3887d;
+  font-weight: bold;
 `
 
 const Form = styled.label`
-  color: purple;
-  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
 `
 
 const Inputs = styled.input`
   background: transparent;
+  padding: 5px;
+  color: #Ed4e45;
+`
+const Select = styled.select`
+  padding: 5px;
+
 `
 
 export default class Filters extends Component {
@@ -29,10 +41,11 @@ export default class Filters extends Component {
           <Form>Busca:
           <Inputs onChange={this.props.onChangeSearch} type="text" value={this.props.search} id="BuscaProdutos" placeholder='Buscar Produtos' />
           </Form>
-          <select name="select" value={this.props.order} onChange={this.props.onChangeOrder}>
+          Ordenação:
+          <Select name="select" value={this.props.order} onChange={this.props.onChangeOrder}>
             <option value="Crescente">Crescente</option>
             <option value="Decrescente">Decrescente</option>
-          </select>
+          </Select>
       </Filtro>
     )
   }

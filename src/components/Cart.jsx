@@ -11,7 +11,7 @@ const Shopping = styled.div`
     width: 30%;
     background-color: #b8eeec;
     display:flex;
-    color:black;
+    color: #424c54;
     flex-direction: column;
     align-items: center;
     justify-items: center;
@@ -20,7 +20,18 @@ const Shopping = styled.div`
     box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.2);
 `
 
+const ButtonEnd = styled.button`
+    font-size: 15px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #c3887d;
+    border: none;
+    box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.2);
 
+
+
+`
 
 
 
@@ -37,33 +48,33 @@ export default class Cart extends Component {
     }
 
 
-  render() {
-    let componentItem = this.props.items.filter((item, index) => this.props.items.indexOf(item) == index).map((element) =>  {
-        return (
-            <ItemsCart 
-            id={element.id}
-            key={element.id}
-            value={element.value}
-            image={element.image}
-            name={element.name}
-            quant={element.quant}
-            onDelete = {() => this.delCart(element.id)}
-            onClick = {this.props.onClick}
-            />
-        )
-    })
+    render() {
+        let componentItem = this.props.items.filter((item, index) => this.props.items.indexOf(item) === index).map((element) => {
+            return (
+                <ItemsCart
+                    id={element.id}
+                    key={element.id}
+                    value={element.value}
+                    image={element.image}
+                    name={element.name}
+                    quant={element.quant}
+                    onDelete={() => this.delCart(element.id)}
+                    onClick={this.props.onClick}
+                />
+            )
+        })
 
-    return (
-      <Shopping>
-          <h1>Carrinho de Compras</h1>
-          <div>
-              {componentItem}
-          </div>
-          <div>
-              {this.props.items.lenght === 0 ? 'Carrinho Vazio' : `Valor Total: R$ ${this.props.totalCar}`}
-          </div>
-          <button>Finalizar Compra</button>
-      </Shopping>
-    )
-  }
+        return (
+            <Shopping>
+                <h1>Carrinho de Compras</h1>
+                <div>
+                    {componentItem}
+                </div>
+                <div>
+                    {this.props.items.lenght === 0 ? 'Carrinho Vazio' : `Valor Total: R$ ${this.props.totalCar}`}
+                </div>
+                <ButtonEnd>Finalizar Compra</ButtonEnd>
+            </Shopping>
+        )
+    }
 }
