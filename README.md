@@ -11,10 +11,10 @@ A nossa logo foi feita exclusivamente pela sobrinha da Raquel para o nosso E-com
 Na Home são mostrados os cards com todas as viagnes disponíveis, que são os produtos oferecidos por nós.
 Em cada card é mostrado o nome, descrição, preço e imagem do produto.
 
-Exista também em cada card um botão de "Adicionar ao Carrinho". Ao clicar nele, é exibido um alert que indicar ao usuário que o produto foi adicionado ao carrinho.
+Existe também em cada card um botão de "Adicionar ao Carrinho". Ao clicar nele, é exibido um alert que indica ao usuário que o produto foi adicionado ao carrinho.
 
-Ao cliclar no ícone do carrinho o usuário pode verificar o produto e a quantidade de vezes que ele foi adicionado e, se o usuário quiser, existe a opção de remover os itens do carrinho.
-No carrinho o usuário também pode verificar o valor total dos produtos.
+Ao cliclar no ícone do carrinho o usuário pode verificar o produto e a quantidade de vezes que ele foi adicionado e, se o usuário quiser, existe a opção de remover os itens do carrinho, um a um.
+No carrinho o usuário também pode verificar o valor total dos produtos adicionados.
 
 Existe a opção de o usuário ordenar os produtos por preço (crescente ou decrescente).
 O usuário pode procurar os produtos por valor mínimo e máximo e também por nome.
