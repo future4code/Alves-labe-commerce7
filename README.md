@@ -26,7 +26,7 @@ Fizemos um footer em que o usuário encontra os ícones das redes sociais. Clica
 Fizemos também um seção com depoimentos de usuários que já utilizaram o serviço.
 
 Utilizamos a seguinte paleta de cores gerada através da roda de cores do site da Adobe:
-![Paleta Adobe] (./imagem-md/image.png)
+![Paleta Adobe](./imagem-md/image.png)
 
 # Conheça nosso E-commerce
 
