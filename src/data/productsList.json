@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "name": "Pacote Lua",
+      "text": "Já pensou em tomar um banho de lua? Pacote inclui: translado até a estação da Nasa, passagem classe ecônomica no ônibus espacial Columbia.",
+      "value": 50000,
+      "image": "https://images.unsplash.com/photo-1446941611757-91d2c3bd3d45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=502&q=80",
+      "quant": 0
+    },
+    {
+      "id": 2,
+      "name": "Pacote Saturno",
+      "text": "Bora fazer igual a Rita Lee e ir roubar os anéis de Saturno? Nosso pacote inclui: translado até a estação da Nasa, passagem classe ecônomica.",
+      "value": 70500,
+      "image": "https://images.unsplash.com/photo-1637984135921-301a7d39e3b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1015&q=80",
+      "quant": 0
+    },
+    {
+      "id": 3,
+      "name": "Pacote Sol",
+      "text": "Que tal fugir do frio e se bronzear direto na fonte?. Nosso pacote inclui: translado até a estação da Nasa, passagem classe ecônomica.",
+      "value": 70000,
+      "image": "https://images.unsplash.com/photo-1614642264762-d0a3b8bf3700?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+      "quant": 0
+    },
+    {
+      "id": 4,
+      "name": "Cruzeiro interestelar",
+      "text": "Que tal passar os dias em alto céu em nosso cruzeiro AllIncluse. Nosso pacote inclui: translado até a estação da Nasa, cabine básica sem janela.",
+      "value": 40000,
+      "image": "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80",
+      "quant": 0
+    },
+    {
+      "id": 5,
+      "name": "Pacote Plutão",
+      "text": "O que acha de ir até Plutão e investigar se ele é ou não é um planeta?. Nosso pacote inclui: translado até a estação da Nasa, passagem classe ecônomica.",
+      "value": 1000000,
+      "image": "https://t.ctcdn.com.br/7zMFWxr35hVKonZXTTWl0Etfew4=/1200x675/smart/filters:format(webp)/i282230.jpeg",
+      "quant": 0
+    },
+    {
+      "id": 6,
+      "name": "Pacote Centro da Terra",
+      "text": "Viagem ao centro da terra? #Partiu. Nosso pacote inclui: translado subterraneo até a CenterTrip, passagem classe ecônomica.",
+      "value": 800000,
+      "image": "https://i.ytimg.com/vi/1wbN0ChoTqc/hqdefault.jpg",
+      "quant": 0
+    }
+  ]
+  
